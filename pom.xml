@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--
+~
+~ Copyright 2017 Symphony Communication Services, LLC.
+~
+~ Licensed to The Symphony Software Foundation (SSF) under one
+~ or more contributor license agreements.  See the NOTICE file
+~ distributed with this work for additional information
+~ regarding copyright ownership.  The ASF licenses this file
+~ to you under the Apache License, Version 2.0 (the
+~ "License"); you may not use this file except in compliance
+~ with the License.  You may obtain a copy of the License at
+~
+~   http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing,
+~ software distributed under the License is distributed on an
+~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~ KIND, either express or implied.  See the License for the
+~ specific language governing permissions and limitations
+~ under the License.
+-->
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.symphonyoss.s2</groupId>
+		<artifactId>S2-super-pom</artifactId>
+		<version>0.1.1</version>
+	</parent>
+	
+	<groupId>org.symphonyoss.symphony.tools.rest.examples</groupId>
+  <artifactId>symphony-rest-tools-examples</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Examples for Symphony REST Tools</name>
+  <description>Examples for Symphony REST Tools</description>
+  <url>https://github.com/symphonyoss/symphony-rest-tools-examples</url>
+  <packaging>pom</packaging>
+  
+  <modules>
+  		<module>healthcheck-monitor</module>
+  </modules>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git://github.com/symphonyoss/symphony-rest-tools-examples.git</connection>
+		<developerConnection>scm:git:git@github.com:symphonyoss/symphony-rest-tools-examples.git</developerConnection>
+		<url>https://github.com/symphonyoss/symphony-rest-tools-examples</url>
+	  <tag>HEAD</tag>
+  </scm>
+	
+	<developers>
+        <developer>
+            <id>ldrozdz</id>
+            <name>Łukasz Dróżdż</name>
+            <email>lukasz@symphony.com</email>
+            <url>http://github.com/ldrozdz</url>
+            <organization>Symphony Communication Services LLC</organization>
+            <organizationUrl>http://symphony.com</organizationUrl>
+            <roles>
+                <role>Senior Director Platform</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>bruceskingle</id>
+            <name>Bruce Skingle</name>
+            <email>bruce.skingle@symphony.com</email>
+            <url>http://github.com/bruceskingle</url>
+            <organization>Symphony Communication Services LLC</organization>
+            <organizationUrl>http://symphony.com</organizationUrl>
+            <roles>
+                <role>Chief Architect</role>
+            </roles>
+        </developer>
+    </developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>sonatype-oss-public</id>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.symphonyoss.symphony.tools.rest</groupId>
+				<artifactId>org.symphonyoss.symphony.tools.rest</artifactId>
+				<version>0.1.6-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.findbugs</groupId>
+				<artifactId>jsr305</artifactId>
+				<version>3.0.2</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
